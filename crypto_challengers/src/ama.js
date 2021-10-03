@@ -3,6 +3,15 @@ import "./ama.css";
 
 //https://medium.com/feed/@CryptoChallengersD
 
+function Card(props) {
+  return (
+    <a href={props.post.link}>
+      <img src={props.post.thumbnail} height="100px" width="100px" />
+      <h4>{props.post.title}</h4>
+    </a>
+  );
+}
+
 function AMA() {
   const [posts, setPosts] = useState(null);
   useEffect(() => {
@@ -28,12 +37,7 @@ function AMA() {
   return (
     <div>
       <h1>AMA</h1>
-      {posts &&
-        posts.map((post, index) => (
-          <div key={index}>
-            <p>{post.title}</p>
-          </div>
-        ))}
+      {posts && posts.map((post, index) => <Card post={post} key={index} />)}
     </div>
   );
 }
