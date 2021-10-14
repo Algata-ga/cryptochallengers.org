@@ -58,7 +58,7 @@
   height: calc(100vh - 56px);
 }
 .main .main-hero {
-  background-image: url("./assets/hero.svg");
+  background-image: url("../assets/hero.svg"");
   background-repeat: no-repeat;
   background-position: bottom;
   background-position-x: right;
