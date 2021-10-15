@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Mina&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira&display=swap');
 
 
 * {
@@ -25,7 +28,7 @@
 .navbar-brand {
   padding-left: 12px;
   font-family: "Mina", sans-serif;
-  font-weight: bold;
+  font-weight: bolder;
   display: flex;
 }
 .navbar-brand img {
@@ -48,9 +51,8 @@
 .main .main-content {
   justify-content: flex;
   align-self: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
   font-size: 40px;
 }
 
@@ -81,7 +83,32 @@
   font-weight: bolder;
   font-size: larger;
 }
-
+.button{
+  display: flex;
+  justify-content: center;
+}
+.joinus{
+  width: 8em;
+  height: 1.8em;
+  border-radius: .5em;
+  background-color: #51aeff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  border: none;
+  font-weight: bold;
+}
+.joinus:hover{
+  background: transparent;
+  border: solid #51aeff;
+  transition: 1s ease;
+}
+.joinus p{
+  margin: 10px;
+  font-size: 1em;
+}
 /*partners*/
 
 /* Styling*/
@@ -178,6 +205,10 @@
   width: 18rem;
   height: 22rem;
   border-radius: 23px;
+  font-family: 'Noto Sans', sans-serif;
+}
+.highlights .card h4{
+  font-weight: bolder;
 }
 .highlights .card1 {
   background: linear-gradient(154.96deg, #51aeff 28.57%, #4dfff0 96.22%);
@@ -188,6 +219,10 @@
   background: #4dfff0;
   box-shadow: 2px 10px 17px 3px rgba(0, 0, 0, 0.25);
   border-radius: 23px;
+  --animate-delay: .5s;
+}
+.highlights .card4{
+  --animate-delay: 1.5s;
 }
 .highlights .card-body {
   display: flex;
@@ -221,6 +256,8 @@
 .about-content {
   font-size: 25px;
   text-align: left;
+  font-family: 'Yaldevi', sans-serif;
+  text-align: center;
 }
 
 /*services*/
@@ -236,6 +273,8 @@
   flex-direction: column;
   justify-content: center;
   align-self: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
 }
 .services .card {
   margin: 10px auto;
@@ -333,6 +372,7 @@
   text-align: center;
   margin-top: 10%;
   border-radius: 35%;
+  font-family: 'Saira', sans-serif;
 }
 .swiper-pagination-bullet-active{
   background-color: #51aeff;
@@ -358,6 +398,8 @@
 /*contact*/
 .contact {
   background: linear-gradient(180deg, #1b232a 0%, #161616 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
 }
 
 .form-control {
@@ -367,7 +409,7 @@
   border: none;
   border-radius: 37px;
 
-  border: 2px solid white;
+  border: 2px solid #c4c4c4;
 }
 input[placeholder],
 [placeholder],
@@ -444,9 +486,11 @@ input[placeholder],
   color: #000;
   border: 2px solid white;
   border-radius: 50%;
+  width: 48px;
+  height: 48px;
 }
 .icons .btn-primary:hover {
-  background-color: black;
+  background-color: #51aeff;
   border: 2px solid black;
   border-radius: 50%;
   color: white;
@@ -478,6 +522,15 @@ footer {
     font-size: 25px;
   }
 }
+@media (min-width:768px) {
+  .joinus{
+    width: 6em;
+    height: 1.4em;
+  }
+  .joinus p{
+    font-size: .8em;
+  }
+}
 @media (min-height: 768px) {
 
 
@@ -493,6 +546,7 @@ footer {
   .main .main-content {
     font-size: 20px;
   }
+  
   .about-content {
     font-size: 20px;
     padding: 0px 5px;
