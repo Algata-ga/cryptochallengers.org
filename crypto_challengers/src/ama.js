@@ -44,7 +44,6 @@ const RecentCard = (props) => {
                             <div className="content col-6">
                                 <h2>{props.post.title}</h2>
                                 <h3>{props.post.pubDate}</h3>
-                                <p>Lorem Ipsum</p>
                             </div>
                         </div>
                     </div>
@@ -67,9 +66,8 @@ const Card = (props) => {
                 </div>
 
                 <div className="old-content">
-                    <h2>{props.post.title}</h2>
+                    <h2>{props.post.title}</h2> 
                     <h3>{props.post.pubDate}</h3>
-                    <p>Lorem Ipsum</p>
                 </div>
             </div>
         </a>

@@ -334,6 +334,9 @@
   margin-top: 10%;
   border-radius: 35%;
 }
+.swiper-pagination-bullet-active{
+  background-color: #51aeff;
+}
 .iconify {
   height: 50px !important;
   width: auto;
