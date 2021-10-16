@@ -13,7 +13,7 @@ const Header = () => {
           text-uppercase
         "
             >
-                <a classNam="navbar-brand" href="index.html">
+                <a className="navbar-brand" href="index.html">
                     <img
                         src={logo}
                         alt=""
@@ -27,6 +27,12 @@ const Header = () => {
 };
 
 const RecentCard = (props) => {
+    let parsedtitle = props.post.title.split(/\n/);
+    let title = parsedtitle[0].split(":");
+    title = title[1];
+
+    let date = parsedtitle[2].split(":");
+    date = date[1];
     return (
         <section>
             <a href={props.post.link}>
@@ -42,9 +48,8 @@ const RecentCard = (props) => {
                                 />
                             </div>
                             <div className="content col-6">
-                                <h2>{props.post.title}</h2>
-                                <h3>{props.post.pubDate}</h3>
-                                <p>Lorem Ipsum</p>
+                                <h2>{title}</h2>
+                                <h3>{date}</h3>
                             </div>
                         </div>
                     </div>
@@ -55,34 +60,60 @@ const RecentCard = (props) => {
 };
 
 const Card = (props) => {
-    return (
-        <a href={props.post.link}>
-            <div className="card older">
-                <div className="old-img">
-                    <img
-                        className="img-fluid"
-                        src={props.post.thumbnail}
-                        alt=""
-                    />
-                </div>
+    console.log(props);
+    if (props.post == null) return null;
+    let parsedtitle = props.post.title.split(/\n/);
+    let title = parsedtitle[0].split(":");
+    title = title[1];
 
-                <div className="old-content">
-                    <h2>{props.post.title}</h2>
-                    <h3>{props.post.pubDate}</h3>
-                    <p>Lorem Ipsum</p>
-                </div>
+    let date = parsedtitle[2].split(":");
+    date = date[1];
+    return (
+        <div className="col-12 col-md-6 col-lg-3 ">
+            <div className="card older">
+                <a href={props.post.url}>
+                    <div className="old-img">
+                        <img
+                            className="img-fluid"
+                            src={props.post.thumbnail}
+                            alt=""
+                        />
+                    </div>
+                    <div className="old-content">
+                        <h2>{title}</h2>
+                        <h3>{date}</h3>
+                    </div>
+                </a>
             </div>
-        </a>
+        </div>
     );
 };
 
+const RenderRow = (props) => {
+    var rows = [];
+    for (var i = 0; i < props.posts.length; i = i + 4) {
+        var row = [];
+        console.log(props.posts);
+        row.push(
+            <div className="row" key={props.posts.length + i}>
+                <Card post={props.posts[i]} key={i} />
+                <Card post={props.posts[i + 1]} key={i + 1} />
+                <Card post={props.posts[i + 2]} key={i + 2} />
+                <Card post={props.posts[i + 3]} key={i + 3} />
+            </div>
+        );
+        rows.push(row);
+    }
+    return rows;
+};
 const Cards = (props) => {
+    console.log(props.posts);
     return (
         <section>
-            <div class="cards">
-                {props.post.map((post, index) => (
-                    <Card post={post} key={index} />
-                ))}
+            <div className="cards">
+                <div className="container">
+                    <RenderRow posts={props.posts} />
+                </div>
             </div>
         </section>
     );
@@ -104,7 +135,6 @@ const AMA = () => {
             );
             const data = await response.json();
             setPosts(data.items);
-            console.log(posts);
         }
 
         getData();
@@ -114,7 +144,8 @@ const AMA = () => {
     return (
         <div>
             <Header />
-            <RecentCard post={posts[2]} />
+            <RecentCard post={posts[0]} />
+            <Cards posts={posts} />
         </div>
     );
 };

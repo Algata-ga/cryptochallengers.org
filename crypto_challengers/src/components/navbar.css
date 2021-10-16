@@ -1,0 +1,20 @@
+.navbar-toggler,
+.navbar-toggler:focus {
+    box-shadow: none;
+    border: none;
+}
+.navbar-brand {
+    padding-left: 12px;
+    font-family: "Mina", sans-serif;
+    font-weight: bold;
+    display: flex;
+}
+.navbar-brand img {
+    margin-top: -1px;
+}
+.navbar-brand .content {
+    padding-left: 10px;
+}
+.navbar ul {
+    font-family: Arial, Helvetica, sans-serif;
+}
