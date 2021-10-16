@@ -32,10 +32,9 @@ $(window).on("load",function(){
           
           strings: ['#WeAreChallengers'],
           smartBackspace: true ,// Default value
-          startDelay: 10,
+          startDelay: 1500,
           typeSpeed:100,
           backSpeed: 100,
-          startDelay:500,
           loop:true,
           
         });

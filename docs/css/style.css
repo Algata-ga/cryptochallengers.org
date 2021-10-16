@@ -55,6 +55,9 @@
   font-weight: bolder;
   font-size: 40px;
 }
+.main .main-content a{
+  text-decoration: none;
+}
 
 .main .row {
   height: calc(100vh - 56px);
@@ -114,21 +117,25 @@
 /* Styling*/
 .slider {
   background: rgb(255, 255, 255);
-  height: 100px;
+  height: 150px;
   margin: auto;
   overflow: hidden;
+  display: flex;
   position: relative;
+
 }
 
 .slide-track {
   animation: scroll 30s linear infinite;
   display: flex;
   width: calc(250px * 30);
+  
 }
 
 .slide {
   height: 100px;
   width: 250px;
+  align-self: center;
 }
 .slide img {
   width: 230px;
@@ -206,6 +213,9 @@
   height: 22rem;
   border-radius: 23px;
   font-family: 'Noto Sans', sans-serif;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none
 }
 .highlights .card h4{
   font-weight: bolder;
@@ -257,7 +267,7 @@
   font-size: 25px;
   text-align: left;
   font-family: 'Yaldevi', sans-serif;
-  text-align: center;
+  text-align: left;
 }
 
 /*services*/
@@ -284,10 +294,11 @@
   color: #171D23;
   border-radius: 14px;
 }
+
 .services .card:hover{
-  color: black;
-  transform: translateY(-1rem);
-  transition: ease-in .7s;
+  font-size: 4.8rem;
+  transition: ease-in .1s;
+  box-shadow: 0px 0px 20px #51aeff;
 }
 
 .services .card-body {
@@ -305,6 +316,9 @@
   font-size: 1.5rem;
   font-weight: bolder;
   margin: 10px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none
 }
 .card-body svg {
   width: 50px;
