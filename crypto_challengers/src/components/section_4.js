@@ -9,7 +9,11 @@ const About = () => {
             <div className="container">
                 <div className="row">
                     <div className="about-img col-12 col-md-5">
-                        <img className="img-fluid" src={Logo} alt="" />
+                        <img
+                            className="img-fluid wow animate__animated animate__fadeIn"
+                            src={Logo}
+                            alt=""
+                        />
                     </div>
                     <div className="about-content col-12 col-md-7">
                         <p>

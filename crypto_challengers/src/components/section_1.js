@@ -1,6 +1,6 @@
 import "./section_1.css";
 import Typed from "typed.js";
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 const TypedT = () => {
     const typeTarget = useRef(null);
@@ -28,10 +28,20 @@ const Section1 = () => {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-sm-6 main-content text-uppercase">
-                        our mission is to empower the crypto industry and help
-                        projects to grow up.
-                        <br />
-                        <TypedT />
+                        <div className="animate__animated animate__fadeInDown animate__slow">
+                            our mission is to empower the crypto industry and
+                            help projects to grow up.
+                            <br />
+                            <TypedT />
+                        </div>
+
+                        <div className="button animate__animated animate__fadeInUp animate__delay-1s">
+                            <a href="https://t.me/CryptoChallengersD">
+                                <button className="joinus">
+                                    <p>JOIN US</p>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                     <div className="col-sm-6 main-hero"></div>
                 </div>

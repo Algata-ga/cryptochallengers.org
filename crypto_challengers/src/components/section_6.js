@@ -1,4 +1,6 @@
 import "./section_6.css";
+//import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
+//import "swiper/css";
 
 const RenderStars = (props) => {
     var res = [];
@@ -16,7 +18,7 @@ const RenderStars = (props) => {
 
 const ReviewCard = (props) => {
     return (
-        <div className="swiper-slide">
+        <SwiperSlide>
             <div className="content">
                 <i className="iconify" data-icon="bx:bxs-comment-edit"></i>
                 <p className="card-cont">{props.review[0]}</p>
@@ -25,7 +27,7 @@ const ReviewCard = (props) => {
                     <RenderStars stars={props.review[1]} />
                 </p>
             </div>
-        </div>
+        </SwiperSlide>
     );
 };
 const Reviews = () => {
@@ -59,15 +61,16 @@ const Reviews = () => {
     return (
         <section id="reviews" className="review pb-5">
             <div className="heading pt-5">REVIEWS</div>
-
-            <div className="swiper mySwiper pb-5">
-                <div className="swiper-wrapper">
-                    {reviews.map((review) => (
-                        <ReviewCard review={review} key={review[2]} />
-                    ))}
+            <Swiper>
+                <div className="mySwiper pb-5">
+                    <div className="swiper-wrapper">
+                        {reviews.map((review) => (
+                            <ReviewCard review={review} key={review[2]} />
+                        ))}
+                    </div>
+                    <div className="swiper-pagination"></div>
                 </div>
-                <div className="swiper-pagination"></div>
-            </div>
+            </Swiper>
         </section>
     );
 };

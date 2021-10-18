@@ -1,24 +1,10 @@
-* {
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
-}
-::-webkit-scrollbar {
-    display: none;
-}
-.header {
-    width: 100vw;
-}
-.bg-light {
-    background-color: #1b232a !important;
-}
-.navbar {
+.navbar-ama {
     font-family: "Mina", sans-serif;
     font-weight: bold;
     display: flex;
     justify-content: center;
 }
-.navbar-brand {
+.navbar-brand-ama {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -50,10 +36,10 @@
     align-self: center;
     flex-direction: column;
 }
-.content h2{
+.content h2 {
     font-size: 1rem;
 }
-.content h3{
+.content h3 {
     font-size: 1rem;
 }
 .image img {

@@ -2,36 +2,73 @@ import "./section_3.css";
 
 const Highlights = () => {
     return (
-        <section id="highlights" className="highlights pb-3">
-            <div className="heading pt-5 pb-5">OUR HIGHLIGHTS</div>
+        <section id="highlights" class="highlights pb-3">
+            <div class="heading pt-5 pb-5">OUR HIGHLIGHTS</div>
 
-            <div className="container pb-5">
-                <div className="row">
-                    <div className="card card1 col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6">
-                        <div className="card-body">
-                            <i className="fa fa-users"></i>
-                            <p>45000+</p>
+            <div class="container pb-5">
+                <div class="row">
+                    <div
+                        class="
+              card
+              card1
+              d-flex
+              justify-content-around
+              wow
+              animate__animated animate__fadeInTopLeft animate__delay-s
+            "
+                    >
+                        <div class="card-body">
+                            <i class="fa fa-users"></i>
+                            <p>45,000+</p>
                             <h4>COMMUNITY MEMBERS</h4>
                         </div>
                     </div>
-                    <div className="card card2 col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6">
-                        <div className="card-body">
-                            <i className="fa fa-check-circle"></i>
+                    <div
+                        class="
+              card
+              card2
+              d-flex
+              justify-content-around
+              wow
+              animate__animated animate__fadeInTopLeft animate__delay-1s
+            "
+                    >
+                        <div class="card-body">
+                            <i class="fa fa-check-circle"></i>
                             <p>200+</p>
                             <h4>AMA'S HOSTED</h4>
                         </div>
                     </div>
-                    <div className="card card1 col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6">
-                        <div className="card-body">
-                            <i className="fa fa-twitter"></i>
-                            <p>17000+</p>
+                    <div
+                        class="
+              card
+              card1
+              d-flex
+              justify-content-around
+              wow
+              animate__animated animate__fadeInTopLeft animate__delay-1s
+            "
+                    >
+                        <div class="card-body">
+                            <i class="fa fa-twitter"></i>
+                            <p>17,000+</p>
                             <h4>TWITTER FOLLOWERS</h4>
                         </div>
                     </div>
-                    <div className="card card2 col-12 col-sm-6 col-md-6 col-lg-6 col-lg-6">
-                        <div className="card-body">
-                            <i className="fa fa-gift"></i>
-                            <p>$25000+</p>
+                    <div
+                        class="
+              card
+              card2
+              card4
+              d-flex
+              justify-content-around
+              wow
+              animate__animated animate__fadeInTopLeft animate__delay-1s
+            "
+                    >
+                        <div class="card-body">
+                            <i class="fa fa-gift"></i>
+                            <p>$25,000+</p>
                             <h4>REWARDS</h4>
                         </div>
                     </div>
