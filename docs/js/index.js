@@ -40,6 +40,52 @@ var typed = new Typed("#typed", {
 //contact form
 
 /*validation
+=======
+  });
+         
+         
+         
+         addEventListener("load", function() {
+              setTimeout(hideURLbar, 0);
+          }, false);
+  
+          function hideURLbar() {
+              window.scrollTo(0, 1);
+          }
+  
+  
+          $(function() {
+            var header = $(".bg-dark");
+          
+            $(window).scroll(function() {    
+                var scroll = $(window).scrollTop();
+                if (scroll >= 50) {
+                    header.addClass("scrolled");
+                } else {
+                    header.removeClass("scrolled");
+                }
+            });
+          
+        });
+  
+        var typed = new Typed('#typed', {
+          
+          
+          strings: ['#WeAreChallengers'],
+          smartBackspace: true ,// Default value
+          startDelay: 1500,
+          typeSpeed:100,
+          backSpeed: 100,
+          loop:true,
+          
+        });
+        
+        
+  
+  //contact form
+  
+  /*validation
+>>>>>>> 1ad2ae13ef5e5c2c35f0c567fc176b648cef98ee
   $(document).ready(function(){
     $("#submit-form").validate({
       rules:{
@@ -165,4 +211,3 @@ var wow = new WOW({
     resetAnimation: true, // reset animation on end (default is true)
 });
 wow.init();
-

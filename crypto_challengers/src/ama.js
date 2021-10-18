@@ -48,8 +48,13 @@ const RecentCard = (props) => {
                                 />
                             </div>
                             <div className="content col-6">
+<<<<<<< HEAD
                                 <h2>{title}</h2>
                                 <h3>{date}</h3>
+=======
+                                <h2>{props.post.title}</h2>
+                                <h3>{props.post.pubDate}</h3>
+>>>>>>> 1ad2ae13ef5e5c2c35f0c567fc176b648cef98ee
                             </div>
                         </div>
                     </div>
