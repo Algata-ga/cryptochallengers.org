@@ -60,7 +60,6 @@ const RecentCard = (props) => {
 };
 
 const Card = (props) => {
-    console.log(props);
     if (props.post == null) return null;
     let parsedtitle = props.post.title.split(/\n/);
     let title = parsedtitle[0].split(":");
@@ -71,7 +70,7 @@ const Card = (props) => {
     return (
         <div className="col-12 col-md-6 col-lg-3 ">
             <div className="card older">
-                <a href={props.post.url}>
+                <a href={props.post.link}>
                     <div className="old-img">
                         <img
                             className="img-fluid"

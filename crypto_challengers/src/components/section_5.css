@@ -1,0 +1,53 @@
+/*services*/
+.services {
+    background: linear-gradient(
+        360deg,
+        #ffce31 -0.95%,
+        #000000 -0.94%,
+        #1b232a 93.27%
+    );
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.services .card {
+    margin: 10px auto;
+    width: 14.4rem;
+    height: 17.64rem;
+    background: linear-gradient(141.79deg, #b8bed1 4.55%, #e5edec 162.15%);
+    color: #171d23;
+    border-radius: 14px;
+}
+.services .card:hover {
+    color: black;
+    transform: translateY(-1rem);
+    transition: ease-in 0.7s;
+}
+
+.services .card-body {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+    text-align: center;
+}
+.services .card .fa {
+    font-size: 4.5rem;
+    margin-top: 30px;
+}
+.services .card p {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 10px;
+}
+.card-body svg {
+    width: 50px;
+    height: auto !important;
+}
+
+.tg-rotate {
+    transform: rotate(45deg);
+    pointer-events: none;
+}

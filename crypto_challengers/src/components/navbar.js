@@ -26,7 +26,6 @@ const Navbar = () => {
                     </a>
 
                     <button
-                        onClick={console.log("clicked")}
                         className="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"

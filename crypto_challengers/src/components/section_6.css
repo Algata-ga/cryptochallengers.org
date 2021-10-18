@@ -1,0 +1,78 @@
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    height: initial !important;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide-active {
+    color: white;
+    background: linear-gradient(
+        360deg,
+        #ffce31 -0.95%,
+        #000000 -0.94%,
+        #1b232a 93.27%
+    );
+}
+.swiper-slide-prev,
+.swiper-slide-next {
+    background: linear-gradient(
+        360deg,
+        #ffce31 -0.95%,
+        #000000 -0.94%,
+        #1b232a 93.27%
+    );
+
+    color: #f1f4f6 !important;
+}
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top {
+    background: linear-gradient(
+        360deg,
+        #ffce31 -0.95%,
+        #000000 -0.94%,
+        #1b232a 93.27%
+    );
+    z-index: -5;
+    border-radius: 30px;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+.swiper-wrapper {
+    width: 50% !important;
+}
+.swiper .content {
+    text-align: center;
+    margin-top: 10%;
+    border-radius: 35%;
+}
+.iconify {
+    height: 50px !important;
+    width: auto;
+    padding-bottom: 1rem;
+}
+.card-cont {
+    margin: 10px;
+}
+.content .fa-star {
+    color: gold;
+}
+.founder {
+    padding-left: 50%;
+}
+:-webkit-scrollbar {
+    display: none;
+}
