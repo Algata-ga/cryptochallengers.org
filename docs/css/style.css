@@ -579,8 +579,8 @@ footer {
         position: absolute;
         bottom: 0;
         height: 50%;
-        background-position-x: center;
         background-position: bottom;
+        background-position-x: right;
 
     }
 }
