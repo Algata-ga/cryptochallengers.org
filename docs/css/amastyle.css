@@ -11,6 +11,7 @@
 }
 body{
   background: #dce1e6;
+  height: 100%;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -49,14 +50,12 @@ body{
 
 
 /*latest*/
-
-.cards{
+.wrapper{
   margin-top: 90px;
-  display: flex;
-  justify-content: space-evenly;
-  
-  
+  min-height: calc(100vh - (106px + 56px));
+  position: relative;
 }
+
 .col-12{
   display: flex;
   justify-content: space-evenly;
@@ -98,6 +97,9 @@ footer {
   background-color: black;
   color: white;
   margin-top: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 .copyright {
   align-self: center;
