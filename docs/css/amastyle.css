@@ -1,68 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira&display=swap");
+
+
+
 * {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
 }
+body{
+  background: #dce1e6;
+}
 ::-webkit-scrollbar {
   display: none;
 }
+
+/*nav*/
 .header {
   width: 100vw;
 }
 .bg-light {
-  background-color: #1b232a !important;
+  background-color: black !important;
 }
-.navbar {
-  font-family: "Mina", sans-serif;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
+.navbar-toggler,
+.navbar-toggler:focus {
+  box-shadow: none;
+  border: none;
 }
 .navbar-brand {
+  padding-left: 12px;
+  font-family: "Mina", sans-serif;
+  font-weight: bolder;
   display: flex;
-  justify-content: center;
-  text-align: center;
 }
+.navbar-brand img {
+  margin-top: -1px;
+}
+.navbar-brand .content {
+  padding-left: 10px;
+}
+.navbar ul {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
 
 /*latest*/
-.latest {
-  margin-top: 90px !important;
-  background: linear-gradient(
-    181.1deg,
-    #1b232a 0.94%,
-    #2e5373 229.57%,
-    #51aeff 664.01%
-  );
-  border-radius: 23px;
+
+.cards{
+  margin-top: 90px;
   display: flex;
-  color: white;
+  justify-content: space-evenly;
+  
+  
 }
-.latest .row{
-    height: 25rem;
-    width: 100%;
+.col-12{
+  display: flex;
+  justify-content: space-evenly;
 }
-.image,.content{
-    width: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    flex-direction: column;
-}
-.image img{
-    width: 80%;
-    height: 75%;
-}
-.image{
-    align-items: center;
-}
-.content{
-    margin-right: auto;
-}
-
 .older {
+  width: fit-content;
+  
   margin-top: 20px;
-  background: #1b232a;
+  background: #fff;
   border-radius: 23px;
   color: white;
   display: flex;
@@ -70,20 +71,46 @@
   flex-direction: column;
   height: fit-content;
   text-align: start;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
 }
 .older img{
     height: 10rem;
-    width: 10rem;
+    width: 20rem;
+    margin: 20px ;
 }
 .old-img{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .old-content{
-    width: 100%;
-    margin-left: 10%;
-    margin-top: 10px;
+  color: black;
+  padding-left: 20px;
+  font-family: "Saira", sans-serif;
 }
 
+/*footer*/
+/*footer*/
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 2rem;
+}
+.copyright {
+  align-self: center;
+}
+.copy a {
+  text-decoration: none;
+  color: white;
+}
+.copy a:hover {
+  color: wheat;
+}
+
+
+@media (max-width: 380px) {
+  .navbar-brand .content {
+      display: none;
+  }
+}
