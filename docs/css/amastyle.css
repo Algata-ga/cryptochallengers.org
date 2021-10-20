@@ -123,38 +123,7 @@ footer {
     height: 30px;
     width: 30px;
     margin: 5px;
-    background-color: #55eed0;
-    border-radius: 50%;
-    animation: loader 2s linear infinite;
-    transition: ease 2s;
-}
-span:nth-child(1) {
-    animation-delay: 50ms;
-}
-span:nth-child(2) {
-    animation-delay: 100ms;
-}
-span:nth-child(3) {
-    animation-delay: 150ms;
-}
-span:nth-child(4) {
-    animation-delay: 200ms;
-}
-loader {
-    width: 100vw;
-    height: calc(99vh - 5px);
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-}
-.loader span {
-    display: block;
-    height: 30px;
-    width: 30px;
-    margin: 5px;
-    background-color: #55eed0;
+    background-color: #77a5ce;
     border-radius: 50%;
     animation: loader 2s linear infinite;
     transition: ease 2s;
