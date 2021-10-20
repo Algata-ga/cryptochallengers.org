@@ -2,162 +2,225 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Saira&display=swap");
 
-
-
 * {
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
 }
-body{
-  background: #dce1e6;
-  height: 100%;
+body {
+    background: #dce1e6;
+    height: 100%;
+}
+a {
+    text-decoration: none;
 }
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 /*loader*/
-.loader{
-  width: 100vw;
-  height: calc(99vh - 5px);
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
+.loader {
+    width: 100vw;
+    height: calc(99vh - 5px);
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
 }
-.loader span{
-  display: block;
-  height: 30px;
-  width: 30px;
-  margin: 5px;
-  background-color: #55eed0;
-  border-radius: 50%;
-  animation: loader 2s linear infinite;
-  transition: ease 2s;
+.loader span {
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    background-color: #55eed0;
+    border-radius: 50%;
+    animation: loader 2s linear infinite;
+    transition: ease 2s;
 }
-span:nth-child(1){
-  animation-delay: 50ms;
+span:nth-child(1) {
+    animation-delay: 50ms;
 }
-span:nth-child(2){
-  animation-delay: 100ms;
+span:nth-child(2) {
+    animation-delay: 100ms;
 }
-span:nth-child(3){
-  animation-delay: 150ms;
+span:nth-child(3) {
+    animation-delay: 150ms;
 }
-span:nth-child(4){
-  animation-delay: 200ms;
+span:nth-child(4) {
+    animation-delay: 200ms;
 }
-@keyframes loader{
-  10%{
-    background: #51aeff;
-  }
-  20%{
-    background: #77a5ce;
-  }
-
+@keyframes loader {
+    10% {
+        background: #51aeff;
+    }
+    20% {
+        background: #77a5ce;
+    }
 }
 
 /*nav*/
 .header {
-  width: 100vw;
+    width: 100vw;
 }
 .bg-light {
-  background-color: black !important;
+    background-color: black !important;
 }
 .navbar-toggler,
 .navbar-toggler:focus {
-  box-shadow: none;
-  border: none;
+    box-shadow: none;
+    border: none;
 }
 .navbar-brand {
-  padding-left: 12px;
-  font-family: "Mina", sans-serif;
-  font-weight: bolder;
-  display: flex;
+    padding-left: 12px;
+    font-family: "Mina", sans-serif;
+    font-weight: bolder;
+    display: flex;
 }
 .navbar-brand img {
-  margin-top: -1px;
+    margin-top: -1px;
 }
 .navbar-brand .content {
-  padding-left: 10px;
+    padding-left: 10px;
 }
-.navbar ul {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
-
 
 /*latest*/
-.wrapper{
-  margin-top: 90px;
-  min-height: calc(100vh - (106px + 56px));
-  position: relative;
+.wrapper {
+    margin-top: 90px;
+    min-height: calc(100vh - (106px + 56px));
+    position: relative;
 }
-
-.col-12{
-  display: flex;
-  justify-content: space-evenly;
+.col-12 {
+    display: flex;
+    justify-content: space-evenly;
 }
 .older {
-  width: fit-content;
-  
-  margin-top: 20px;
-  background: #fff;
-  border-radius: 23px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: fit-content;
-  text-align: start;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    width: fit-content;
+
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 23px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    text-align: start;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.older img{
+.older img {
     height: 10rem;
     width: 20rem;
-    margin: 20px ;
+    margin: 20px;
 }
-.old-img{
+.old-img {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.old-content{
-  color: black;
-  padding-left: 20px;
-  font-family: "Saira", sans-serif;
-  max-width: 20rem !important;
+.old-content {
+    color: black;
+    padding-left: 20px;
+    font-family: "Saira", sans-serif;
+    max-width: 20rem !important;
 }
-.old-content h3{
-  font-size: medium;
+.old-content h3 {
+    font-size: medium;
+    color: black;
+    padding-left: 20px;
+    font-family: "Saira", sans-serif;
 }
 
-/*footer*/
 /*footer*/
 footer {
-  background-color: black;
-  color: white;
-  margin-top: 1rem;
-  width: 100%;
+    background-color: black;
+    color: white;
+    margin-top: 1rem;
+    width: 100%;
 }
 .copyright {
-  align-self: center;
+    align-self: center;
 }
 .copy a {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 .copy a:hover {
-  color: wheat;
+    color: wheat;
 }
 
-
+.loader {
+    width: 100vw;
+    height: calc(99vh - 5px);
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: #dce1e6;
+}
+.loader span {
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    background-color: #55eed0;
+    border-radius: 50%;
+    animation: loader 2s linear infinite;
+    transition: ease 2s;
+}
+span:nth-child(1) {
+    animation-delay: 50ms;
+}
+span:nth-child(2) {
+    animation-delay: 100ms;
+}
+span:nth-child(3) {
+    animation-delay: 150ms;
+}
+span:nth-child(4) {
+    animation-delay: 200ms;
+}
+loader {
+    width: 100vw;
+    height: calc(99vh - 5px);
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.loader span {
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    background-color: #55eed0;
+    border-radius: 50%;
+    animation: loader 2s linear infinite;
+    transition: ease 2s;
+}
+span:nth-child(1) {
+    animation-delay: 50ms;
+}
+span:nth-child(2) {
+    animation-delay: 100ms;
+}
+span:nth-child(3) {
+    animation-delay: 150ms;
+}
+span:nth-child(4) {
+    animation-delay: 200ms;
+}
+@keyframes loader {
+    10% {
+        background: #51aeff;
+    }
+    20% {
+        background: #77a5ce;
+    }
+}
 @media (max-width: 380px) {
-  .navbar-brand .content {
-      display: none;
-  }
+    .navbar-brand .content {
+        display: none;
+    }
 }
