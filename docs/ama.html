@@ -11,7 +11,6 @@
             crossorigin="anonymous"
         />
 
-        <link rel="stylesheet" href="./css/amastyle.css" />
 
         <script
             rel="prefetch"
@@ -24,6 +23,8 @@
             crossorigin
         ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+        <link rel="stylesheet" href="./css/amastyle.css" />
+
     </head>
     <body>
         <header>
@@ -102,6 +103,7 @@
         </header>
 
         <div id="amas_react"></div>
+
         <footer>
             <div class="copyright text-center p-2">
                 <div class="copy">
@@ -131,7 +133,7 @@
                 let date = parsedtitle[2].split(":");
                 date = date[1];
                 return (
-                    <div className="col-12 col-md-6 col-lg-3 ">
+                    <div className="col-12 col-md-6 col-lg-6 col-xl-3 ">
                         <div className="card older">
                             <a href={props.post.link}>
                                 <div className="old-img">
@@ -142,7 +144,7 @@
                                     />
                                 </div>
                                 <div className="old-content">
-                                    <h2>{title}</h2>
+                                    <h3>{title}</h3>
                                     <h3>{date}</h3>
                                 </div>
                             </a>

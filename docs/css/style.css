@@ -551,19 +551,6 @@ footer {
     }
 }
 @media (max-width: 768px) {
-    .main .main-content {
-        font-size: 20px;
-    }
-
-    .about-content {
-        font-size: 20px;
-        padding: 0px 5px;
-    }
-    .swiper-wrapper {
-        width: 70% !important;
-    }
-}
-@media (max-width:575px) {
     .main{
         height: calc(100vh - 54px) !important;
     }
@@ -574,6 +561,7 @@ footer {
         flex-direction: column;
         height: 50%;
         top: 15%;
+        width: 100vw;
     }
     .main .main-hero{
         position: absolute;
@@ -581,7 +569,19 @@ footer {
         height: 50%;
         background-position: bottom;
         background-position-x: right;
+        width: 100vw;
 
+    }
+    .main .main-content {
+        font-size: 20px;
+    }
+
+    .about-content {
+        font-size: 20px;
+        padding: 0px 5px;
+    }
+    .swiper-wrapper {
+        width: 70% !important;
     }
 }
 

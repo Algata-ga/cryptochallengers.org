@@ -89,6 +89,10 @@ body{
   color: black;
   padding-left: 20px;
   font-family: "Saira", sans-serif;
+  max-width: 20rem !important;
+}
+.old-content h3{
+  font-size: medium;
 }
 
 /*footer*/
