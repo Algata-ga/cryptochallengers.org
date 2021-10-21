@@ -130,12 +130,12 @@
     transition: ease-in .1s;
 }
 .slide img {
-    max-width: 90%;
-    height: 40px;
+    max-width: 62%;
+    height: 26px;
     margin: -18px 0px;
 }
 .feg{
-    height: 50px !important;
+    height: 38px !important;
 }
 
 
