@@ -37,6 +37,17 @@ var typed = new Typed("#typed", {
     loop: true,
 });
 
+$(".showmore").click(function(){
+    $(".block-none").addClass("block-show");
+        $(".showmore").css("display","none")
+       
+  });
+
+  $(".showless").click(function(){
+    $(".block-none").css("display","none");
+        $(".showmore").css("display","flex")
+  });
+
 //contact form
 
 /*validation
