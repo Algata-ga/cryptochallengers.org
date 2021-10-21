@@ -146,6 +146,7 @@
 }
 .showmore button,.showless button{
     background-color: #51aeff;
+    color: #ffffff;
     border: none;
     width: 6em;
     border-radius: 25px;
