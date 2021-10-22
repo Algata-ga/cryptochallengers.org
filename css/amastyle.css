@@ -42,6 +42,14 @@ a {
 .navbar-brand .content {
     padding-left: 10px;
 }
+.home{
+    width: 2em;
+    border: none;
+    background: black;
+}
+.home .fa{
+    color: white;
+}
 
 /*latest*/
 .wrapper {
