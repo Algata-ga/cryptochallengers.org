@@ -127,7 +127,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 3px #000;
 }
 .contact-s .fa,
 .contact-s .fab {
@@ -615,6 +614,11 @@ footer {
     .main .main-content {
         font-size: 20px;
     }
+    .contact-s .fa,
+    .contact-s .fab {
+        font-size: 1.3em;
+        
+    }
 
     .about-content {
         font-size: 20px;
@@ -627,6 +631,10 @@ footer {
 }
 
 @media (max-width: 500px) {
+    .contact-s {
+        width: 3em;
+        height: 3em;
+    }
     .main .main-content {
         font-size: 22px;
     }
