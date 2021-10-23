@@ -37,6 +37,15 @@ var typed = new Typed("#typed", {
     loop: true,
 });
 
+$(".navbar li").click(function(){
+    
+    $(".navbar-collapse").toggleClass("show")
+       
+
+});
+
+
+
 $(".cross").click(function(){
     
         $(".close").toggleClass("open")

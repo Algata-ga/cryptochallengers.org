@@ -101,6 +101,7 @@
     margin-top: 2rem;
     border: none;
     font-weight: bold;
+    z-index: 2;
 }
 .joinus:hover {
     background: transparent;
@@ -118,10 +119,9 @@
     z-index: 10;
 }
 .contact-s {
-    width: 4em;
-    height: 4em;
+    width: 3.5em;
+    height: 3.5em;
     background: linear-gradient(to right, #378fdd, #7fb3d8);
-    border: 5px solid linear-gradient(to right, #32383d, #1a3b52);
     border-radius: 50%;
     margin-top: 10px;
     display: flex;
@@ -130,7 +130,7 @@
 }
 .contact-s .fa,
 .contact-s .fab {
-    font-size: 2.1em;
+    font-size: 1.5em;
     color: #fff;
 }
 .close {
