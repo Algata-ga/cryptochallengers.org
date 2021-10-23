@@ -575,6 +575,16 @@ footer {
     .joinus p {
         font-size: 0.8em;
     }
+    .slide {
+        margin-top: 47px !important;
+    }
+    .slide img {
+        height: 45px;
+    }
+    .feg {
+        z-index: -3;
+        height: 85px !important;
+    }
 }
 @media (min-height: 768px) {
     .slide {
