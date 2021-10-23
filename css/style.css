@@ -579,9 +579,6 @@ footer {
     .slide {
         margin-top: 20px;
     }
-    .slide img {
-        height: 40px;
-    }
     .swiper-wrapper {
         width: 40% !important;
     }
