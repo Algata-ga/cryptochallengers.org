@@ -23,7 +23,7 @@ a {
     width: 100vw;
 }
 .bg-light {
-    background-color: black !important;
+    background-color: #000111 !important;
 }
 .navbar-toggler,
 .navbar-toggler:focus {
@@ -42,12 +42,12 @@ a {
 .navbar-brand .content {
     padding-left: 10px;
 }
-.home{
+.home {
     width: 2em;
     border: none;
     background: black;
 }
-.home .fa{
+.home .fa {
     color: white;
 }
 
@@ -145,7 +145,7 @@ span:nth-child(3) {
     animation-delay: 150ms;
 }
 span:nth-child(4) {
-    animation-delay: 200ms;
+    animation-delay: 100ms;
 }
 @keyframes loader {
     10% {
