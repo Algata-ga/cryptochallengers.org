@@ -98,6 +98,31 @@ a {
     font-family: "Saira", sans-serif;
 }
 
+.inmedium{
+    margin-top: 30px !important;
+    color: #51aeff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.inmedium a{
+    text-decoration: none;
+
+}
+.inmedium button{
+    border: none;
+    
+    background: #01080e;
+    color: #49cae8;
+
+    width: 8.5em;
+    height: 2em;
+    border-radius: 13px;
+}
+.inmedium button:hover{
+    color: white;
+    background: #0c1627;}
+
 /*footer*/
 footer {
     background-color: black;
