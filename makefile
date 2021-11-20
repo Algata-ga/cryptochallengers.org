@@ -14,6 +14,8 @@ build :
 
 live : build
 	tar czf site-cryptochallenger.tar.gz build/
+	scp site-cryptochallenger.tar.gz ajrx@server.algata.ga:/home/ajrx/
+
 
 
 
