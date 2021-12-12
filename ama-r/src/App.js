@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Logo from "./assets/logo-white.png";
 
 const Card = (props) => {
     if (props.post == null) return null;
@@ -136,8 +137,8 @@ const App = () => {
                     <div class="container-fluid">
                         <a class="navbar-brand" href="/">
                             <img
-                                src="./assets/logo-white.png"
-                                alt=""
+                                src={Logo}
+                                alt="logo"
                                 width="30"
                                 height="24"
                                 class="d-inline-block align-text-top"

@@ -2,5 +2,6 @@ crypto_challengers/node_modules
 crypto_challengers/build
 ama-r/build
 ama-r/node_modules
-build/
+dist/
+.parcel-cache/
 *.tar.gz
