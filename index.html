@@ -808,13 +808,19 @@ pointer-events: none;
 
         <footer>
             <div class="copyright text-center p-2">
-                <div class="copy">
-                    © 2021<strong><a href="/"> Crypto Challengers. </a></strong
-                    >All rights reserved.
+                <div class="copy" id="copyright">
                 </div>
             </div>
         </footer>
-
+        <script type="text/javascript">
+            const date=new Date();
+            const year=date.getFullYear();
+            const copyright =
+                "©" +
+                year+
+                '<strong><a href="https:cryptochallengers.org"> Crypto Challengers. </a></strong>All rights reserved.';
+            document.getElementById("copyright").innerHTML = copyright;
+        </script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         <script
