@@ -1,6 +1,89 @@
 import React from "react";
 import "./App.css";
-import Logo from "./assets/logo-white.png";
+import Logo from "./assets/logo.png";
+
+const Navbar = () => {
+    return (
+        <header>
+            <nav
+                className="
+                navbar navbar-expand-lg navbar-light
+                fixed-top
+                bg-light
+                text-uppercase
+                "
+            >
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="/">
+                        <img
+                            src={Logo}
+                            alt="LOGO"
+                            width="30"
+                            height="24"
+                            className="d-inline-block align-text-top"
+                        />
+                        <div className="content">CryptoChallengers</div>
+                    </a>
+
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo02"
+                        aria-controls="navbarTogglerDemo02"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        className="collapse navbar-collapse ms-auto"
+                        id="navbarTogglerDemo02"
+                    >
+                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li className="nav-item ms-auto">
+                                <a
+                                    className="nav-link"
+                                    aria-current="page"
+                                    href="/"
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li className="nav-item ms-auto">
+                                <a className="nav-link" href="/#about">
+                                    about
+                                </a>
+                            </li>
+                            <li className="nav-item ms-auto">
+                                <a className="nav-link" href="/#highlights">
+                                    highlights
+                                </a>
+                            </li>
+
+                            <li className="nav-item ms-auto">
+                                <a className="nav-link" href="/#partners">
+                                    partners
+                                </a>
+                            </li>
+
+                            <li className="nav-item ms-auto">
+                                <a className="nav-link" href="/#reviews">
+                                    reviews
+                                </a>
+                            </li>
+                            <li className="nav-item ms-auto">
+                                <a className="nav-link" href="/#contact">
+                                    contact us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    );
+};
 
 const Card = (props) => {
     if (props.post == null) return null;
@@ -101,15 +184,15 @@ const Ama = () => {
         <div>
             <Cards posts={posts} />
 
-            <div class="inmedium">
+            <div className="inmedium">
                 <a href="https://medium.com/@CryptoChallengersD" target="blank">
                     <button>More At Medium</button>
                 </a>
             </div>
 
             <footer>
-                <div class="copyright text-center p-2">
-                    <div class="copy">
+                <div className="copyright text-center p-2">
+                    <div className="copy">
                         © 2021
                         <strong>
                             <a href="/"> Crypto Challengers. </a>
@@ -124,38 +207,8 @@ const Ama = () => {
 
 const App = () => {
     return (
-        <div style={{ height: "max-content" }}>
-            <header>
-                <nav
-                    class="
-                    navbar navbar-expand-lg navbar-dark
-                    fixed-top
-                    bg-light
-                    text-uppercase
-                "
-                >
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="/">
-                            <img
-                                src={Logo}
-                                alt="logo"
-                                width="30"
-                                height="24"
-                                class="d-inline-block align-text-top"
-                            />
-                            <div class="content">CryptoChallengers</div>
-                        </a>
-                        <a href="/">
-                            <button class="home">
-                                <span
-                                    class="fa fa-home"
-                                    style={{ fontSize: "1.4em" }}
-                                ></span>
-                            </button>
-                        </a>
-                    </div>
-                </nav>
-            </header>
+        <div>
+            <Navbar />
             <Ama />
         </div>
     );
