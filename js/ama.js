@@ -46,7 +46,7 @@ function createAMACard(data) {
                             loading="lazy"
                         />
                         <h3>${title}</h3>
-                        <h3>${date}</h3>
+                        <h4>${date}</h4>
                 </a>
             </div>
         `;
@@ -57,10 +57,15 @@ async function renderAMAs() {
     let innerHTML = amas.reduce((prev, a) => prev + createAMACard(a), "");
     document.getElementById("amas").innerHTML = `<div class="sec3">
             <div class="cards">
-                <div class="container" id="amas_container">
-                    ${innerHTML}                    
+                <div class="container1" id="amas_container1">
+                    ${innerHTML}  
                 </div>
             </div>
+            <div class="inmedium">
+                    <a href="https://medium.com/feed/@CryptoChallengers">
+                        <button>View More<i class="fas fa-angle-right"></i></button>
+                    </a>
+                </div>                  
         </div>`;
 }
 
