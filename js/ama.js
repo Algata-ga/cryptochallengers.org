@@ -24,6 +24,7 @@ async function getAMA() {
 }
 
 function createAMACard(data) {
+    console.log(data);
     if (!data) return null;
     let parsedtitle = data.title.split(/\n/);
     let title = parsedtitle[0].split(":");
@@ -53,26 +54,14 @@ function createAMACard(data) {
 }
 async function renderAMAs() {
     const amas = (await getAMA()).items;
-    let innerHTML = "";
-
-    for (let i = 0; i < 8; i = i + 4) {
-        innerHTML = innerHTML + `<div class="row">`;
-        const row =
-            createAMACard(amas[i]) +
-            createAMACard(amas[i + 1]) +
-            createAMACard(amas[i + 2]) +
-            createAMACard(amas[i + 3]);
-        innerHTML = innerHTML + row + `</div>`;
-    }
-    innerHTML = innerHTML + `<div class="row">`;
-    const row = createAMACard(amas[8]) + createAMACard(amas[9]);
-    innerHTML = innerHTML + row + `</div>`;
-
-    document.getElementById("amas").innerHTML = `<section class="wrapper">
-                <div class="cards">
-                    <div class="container">${innerHTML}</div>
+    let innerHTML = amas.reduce((prev, a) => prev + createAMACard(a), "");
+    document.getElementById("amas").innerHTML = `<div class="sec3">
+            <div class="cards">
+                <div class="container" id="amas_container">
+                    ${innerHTML}                    
                 </div>
-            </section>`;
+            </div>
+        </div>`;
 }
 
 ready(function () {

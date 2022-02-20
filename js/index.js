@@ -18,8 +18,6 @@ HTMLElement.prototype.serialize = function () {
     return res;
 };
 
-//url: "https://script.google.com/macros/s/AKfycbw7zHeNRhilb3V3bQ9A9hbNeCVv9HCA026AIUPSLh1HcgI4LPblDRL8HIPIbfI_qlrC/exec",
-//
 ready(() => {
     var typed = new Typed("#typed", {
         strings: ["#WeAreChallengers"],
