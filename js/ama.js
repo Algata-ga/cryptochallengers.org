@@ -36,24 +36,19 @@ function createAMACard(data) {
         date = parsedtitle[2].split(":");
         date = date[1];
     }
-    const card = `<div class="col-12 col-md-6 col-lg-6 col-xl-3 ">
-            <div class="card older">
+    const card = `
+            <div class="card">
                 <a href="${data.link}">
-                    <div class="old-img">
                         <img
-                            class="img-fluid"
                             src=${data.thumbnail}
                             alt=${data.title}
                             loading="lazy"
                         />
-                    </div>
-                    <div class="old-content">
                         <h3>${title}</h3>
                         <h3>${date}</h3>
-                    </div>
                 </a>
             </div>
-        </div>`;
+        `;
     return card;
 }
 async function renderAMAs() {
