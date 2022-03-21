@@ -18,105 +18,22 @@ HTMLElement.prototype.serialize = function () {
     return res;
 };
 
-function getAds() {
-    const data = [
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "11",
-            filename: "11647704358.jpg",
-            id: 57,
-            title: "1",
-        },
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "",
-            filename: "1647711942.",
-            id: 67,
-            title: "",
-        },
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description:
-                ".form {         padding: 0;         width: 90%;         padding-left: 15%;     }",
-            filename: "kmlklkdfs1647711628.jpg",
-            id: 66,
-            title: "kmlklkdfs",
-        },
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "",
-            filename: "1647711611.",
-            id: 65,
-            title: "",
-        },
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "kajsldkjalskjdlaksjdlkja",
-            filename: "hj1647710915.jpg",
-            id: 64,
-            title: "hj",
-        },
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "",
-            filename: "1647710848.",
-            id: 63,
-            title: "",
-        },
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "55",
-            filename: "551647708280.jpg",
-            id: 62,
-            title: "55",
-        },
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "",
-            filename: "1647708106.jpg",
-            id: 61,
-            title: "",
-        },
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quis commodi, iusto molestias obcaecati praesentium placeat mollitia numquam similique aut blanditiis est deserunt modi archite",
-            filename: "41647704572.jpg",
-            id: 60,
-            title: "4",
-        },
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "33",
-            filename: "31647704557.jpg",
-            id: 59,
-            title: "3",
-        },
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "22",
-            filename: "21647704538.jpg",
-            id: 58,
-            title: "2",
-        },
-        {
-            date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "",
-            filename: "1647712058.",
-            id: 68,
-            title: "",
-        },
-    ];
+async function getAds() {
+    const response = await fetch(
+        "https://admin.cryptochallengers.org/api/getAds"
+    );
+    const data = await response.json();
     return data;
 }
-function renderAds() {
+async function renderAds() {
     const adb = document.querySelector(".swiper-wrapper");
-    const ads = getAds();
+    const ads = await getAds();
     const innerHTML = ads.reduce((prev, cur) => {
         return (
             prev +
             `
             <div class="swiper-slide adbox" >
-            <img src="http://localhost:5000/ad/${cur.filename}" alt="">
+            <img src="https://admin.cryptochallengers.org/api/ad/${cur.filename}" alt="">
             <h1>${cur.title}</h1>
             <h3>${cur.description}</h3>
             </div>
