@@ -140,10 +140,42 @@
 .open {
     display: flex;
 }
+.blank{
+    width: 60%;
+    height: 15rem;
+    background-image: linear-gradient(45deg,grey,rgb(194, 189, 189),grey);
+    background-size: 300%;
+    animation: bgchange 1.5s infinite alternate;
+}
+.small{
+    margin-top: 1rem;
+    width: 30%;
+    height: 45px;
+    background-image: linear-gradient(to right,grey,rgb(194, 189, 189),grey);
+    background-size: 300%;
+    animation: bgchange 1s infinite alternate;
+}
+.big{
+    margin-top: 1rem;
+    width: 80%;
+    height: 45px;
+    background-image: linear-gradient(to left,grey,rgb(194, 189, 189),grey);
+    background-size: 300%;
+    animation: bgchange 1s infinite alternate;
+}
+@keyframes bgchange {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
 .ad h1,
 .ad h3 {
     color: black !important;
     font-family: "Mina", sans-serif;
+    margin-top: 15px;
 }
 .ad {
     background: linear-gradient(to bottom, #1b232a, white);
