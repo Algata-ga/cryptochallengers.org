@@ -34,6 +34,7 @@ async function renderAds() {
             `
             <div class="swiper-slide adbox" >
             <img src="https://admin.cryptochallengers.org/api/ad/${cur.filename}" alt="">
+            
             <h1>${cur.title}</h1>
             <h3>${cur.description}</h3>
             </div>
@@ -79,7 +80,7 @@ ready(() => {
         },
     });
 
-    renderAds();
+    //renderAds();
 
     const swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
