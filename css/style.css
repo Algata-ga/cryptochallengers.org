@@ -143,6 +143,7 @@
 .ad h1,
 .ad h3 {
     color: black !important;
+    font-family: "Mina", sans-serif;
 }
 .ad {
     background: linear-gradient(to bottom, #1b232a, white);
@@ -170,7 +171,7 @@
     text-align: center;
     font-size: 18px;
     background: transparent;
-
+    height: inherit;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -188,29 +189,34 @@
 .mySwiperad .swiper-slide img {
     display: block;
     width: 60%;
-    height: 100%;
+    height: 80%;
     object-fit: contain;
 }
-.mySwiperad .slide {
+.slide {
     display: flex;
     justify-content: center;
     align-self: center;
     align-items: center;
     height: 60px;
     margin-top: 10px;
+    z-index: 1;
 }
-.mySwiperad .slide:hover {
+.slide:hover {
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
     border-radius: 7px;
     transition: ease-in 0.1s;
 }
-.mySwiperad .slide img {
+.slide img {
     max-width: 62%;
     height: 26px;
     margin: -18px 0px;
 }
 .feg {
     height: 38px !important;
+}
+.okx{
+    height: 65px;
+    z-index: -1;
 }
 
 /* Animation */
@@ -403,15 +409,13 @@
 }
 
 /*review*/
-.swiper {
+.review .swiper {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.swiper-slide {
-    opacity: 0;
-    width: 40rem;
+.review .swiper-slide {
     background-position: center;
     background-size: cover;
     height: initial !important;
@@ -422,7 +426,6 @@
 }
 .swiper-slide-active {
     color: white;
-    opacity: 1;
 
     background: linear-gradient(
         360deg,
@@ -489,6 +492,7 @@
 :-webkit-scrollbar {
     display: none;
 }
+
 
 /*contact*/
 .contact {
@@ -616,6 +620,9 @@ footer {
     .main .main-content {
         font-size: 25px;
     }
+    .mySwiperad .swiper-slide img {
+        height: 60%;
+    }
 }
 @media (min-width: 768px) {
     .joinus {
@@ -695,6 +702,16 @@ footer {
     }
     .adbox h3 {
         max-width: 85%;
+    }
+    .mySwiperad .swiper-slide {
+        opacity: 0;
+    }
+    .mySwiperad .swiper-slide-active {
+        color: white;
+        opacity: 1;
+    }
+    .mySwiperad .swiper-slide img{
+        height: 60%;
     }
 }
 

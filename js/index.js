@@ -79,7 +79,7 @@ function getAds() {
         },
         {
             date: "Sat, 19 Mar 2022 00:00:00 GMT",
-            description: "44",
+            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quis commodi, iusto molestias obcaecati praesentium placeat mollitia numquam similique aut blanditiis est deserunt modi archite",
             filename: "41647704572.jpg",
             id: 60,
             title: "4",
