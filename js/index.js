@@ -80,7 +80,7 @@ ready(() => {
         },
     });
 
-    //renderAds();
+    renderAds();
 
     const swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
