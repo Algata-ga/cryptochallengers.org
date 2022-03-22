@@ -33,7 +33,7 @@ async function renderAds() {
             prev +
             `
             <div class="swiper-slide adbox" >
-            <img src="https://admin.cryptochallengers.org/api/ad/${cur.filename}" alt="">
+            <img src="https://admin.cryptochallengers.org/api/static/${cur.filename}" alt="">
             
             <h1>${cur.title}</h1>
             <h3>${cur.description}</h3>
