@@ -140,34 +140,34 @@
 .open {
     display: flex;
 }
-.blank{
+.blank {
     width: 60%;
     height: 15rem;
-    background-image: linear-gradient(45deg,grey,rgb(194, 189, 189),grey);
+    background-image: linear-gradient(45deg, grey, rgb(194, 189, 189), grey);
     background-size: 300%;
     animation: bgchange 1.5s infinite alternate;
 }
-.small{
+.small {
     margin-top: 1rem;
     width: 30%;
     height: 45px;
-    background-image: linear-gradient(to right,grey,rgb(194, 189, 189),grey);
+    background-image: linear-gradient(to right, grey, rgb(194, 189, 189), grey);
     background-size: 300%;
     animation: bgchange 1s infinite alternate;
 }
-.big{
+.big {
     margin-top: 1rem;
     width: 80%;
     height: 45px;
-    background-image: linear-gradient(to left,grey,rgb(194, 189, 189),grey);
+    background-image: linear-gradient(to left, grey, rgb(194, 189, 189), grey);
     background-size: 300%;
     animation: bgchange 1s infinite alternate;
 }
 @keyframes bgchange {
-    0%{
+    0% {
         background-position: left;
     }
-    100%{
+    100% {
         background-position: 100%;
     }
 }
@@ -178,7 +178,11 @@
     margin-top: 15px;
 }
 .ad {
-    background: linear-gradient(to bottom, #1b232a, white);
+    background: linear-gradient(
+        180deg,
+        #1b232a 17.57%,
+        rgba(196, 196, 196, 0) 89.68%
+    );
 }
 .adbox {
     display: flex;
@@ -197,7 +201,7 @@
     background: white;
     border-radius: 25px 25px 0 0;
 }
-iframe{
+iframe {
     width: 35rem;
     height: 20rem;
 }
@@ -250,7 +254,7 @@ iframe{
 .feg {
     height: 38px !important;
 }
-.okx{
+.okx {
     height: 65px;
     z-index: -1;
 }
@@ -529,7 +533,6 @@ iframe{
     display: none;
 }
 
-
 /*contact*/
 .contact {
     background: linear-gradient(180deg, #1b232a 0%, #161616 100%);
@@ -651,7 +654,7 @@ footer {
     .main .main-content {
         font-size: 30px;
     }
-    iframe{
+    iframe {
         width: 80%;
         height: 22rem;
     }
@@ -663,7 +666,7 @@ footer {
     .mySwiperad .swiper-slide img {
         height: 60%;
     }
-    iframe{
+    iframe {
         width: 80%;
         height: 23rem;
     }
@@ -754,10 +757,10 @@ footer {
         color: white;
         opacity: 1;
     }
-    .mySwiperad .swiper-slide img{
+    .mySwiperad .swiper-slide img {
         height: 60%;
     }
-    iframe{
+    iframe {
         width: 80%;
         height: 20rem;
     }
@@ -781,7 +784,7 @@ footer {
     .swiper-wrapper {
         width: 85% !important;
     }
-    iframe{
+    iframe {
         width: 80%;
         height: 15rem;
     }
