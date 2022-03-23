@@ -26,7 +26,6 @@ async function getAds() {
     return data;
 }
 
-
 async function renderAds() {
     const adb = document.querySelector(".carousel-inner");
     const ads = await getAds();
@@ -36,13 +35,15 @@ async function renderAds() {
             return (
                 prev +
                 `
-            <div class="carousel-item" data-bs-interval="${cur.duration*1000}">
+            <div class="carousel-item" data-bs-interval="${
+                cur.duration * 1000
+            }">
                 ${
                     cur.isVideo
                         ? `<video class="d-block w-100" preload="auto" loop autoplay muted ><source src="
 https://admin.cryptochallengers.org/api/static/${cur.filename}
 "></video>`
-                        : `<img loading='lazy' src="
+                        : `<img  src="
 https://admin.cryptochallengers.org/api/static/${cur.filename}
 " class="d-block w-100" alt="...">`
                 } 
@@ -55,7 +56,9 @@ https://admin.cryptochallengers.org/api/static/${cur.filename}
             `
             );
         },
-        `<div class="carousel-item active" data-bs-interval="${head.duration*1000}">
+        `<div class="carousel-item active" data-bs-interval="${
+            head.duration * 1000
+        }">
                 ${
                     head.isVideo
                         ? `<video class="d-block w-100" preload="auto" loop autoplay muted ><source src="
@@ -73,7 +76,7 @@ https://admin.cryptochallengers.org/api/static/${head.filename}
     );
 
     adb.innerHTML = innerHTML;
-} 
+}
 
 ready(() => {
     const typed = new Typed("#typed", {
