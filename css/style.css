@@ -141,8 +141,8 @@
     display: flex;
 }
 .blank {
-    width: 60%;
-    height: 15rem;
+    width: 100%;
+    height: 25rem;
     background-image: linear-gradient(45deg, grey, rgb(194, 189, 189), grey);
     background-size: 300%;
     animation: bgchange 1.5s infinite alternate;
@@ -162,6 +162,7 @@
     background-image: linear-gradient(to left, grey, rgb(194, 189, 189), grey);
     background-size: 300%;
     animation: bgchange 1s infinite alternate;
+    margin-bottom: 10px;
 }
 @keyframes bgchange {
     0% {
