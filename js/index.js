@@ -26,21 +26,26 @@ async function getAds() {
     return data;
 }
 async function renderAds() {
-    const adb = document.querySelector(".swiper-wrapper");
+    const adb = document.querySelector(".carousel-inner");
     const ads = await getAds();
     const innerHTML = ads.reduce((prev, cur) => {
         return (
             prev +
             `
-            <div class="swiper-slide adbox" style="    background: url(https://admin.cryptochallengers.org/api/static/${cur.filename});            ; background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;">
-            
-            <div class="box">
-            <h1>${cur.title}</h1>
-            <h3>${cur.description}</h3>
-            </div/>
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="https://admin.cryptochallengers.org/api/static/${ads[0].filename}" class="d-block w-100" alt="...">
+                <div class="box">
+                <h1>${ads[0].title}</h1>
+                <h3>${ads[0].description}</h3>
             </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="https://admin.cryptochallengers.org/api/static/${cur.filename}" class="d-block w-100" alt="...">
+            </div>
+
+            
+            
+            
             `
         );
     }, "");
