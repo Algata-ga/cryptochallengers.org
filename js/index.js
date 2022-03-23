@@ -32,11 +32,14 @@ async function renderAds() {
         return (
             prev +
             `
-            <div class="swiper-slide adbox" >
-            <img src="https://admin.cryptochallengers.org/api/ad/${cur.filename}" alt="">
+            <div class="swiper-slide adbox" style="    background: url(https://admin.cryptochallengers.org/api/static/${cur.filename});            ; background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;">
             
+            <div class="box">
             <h1>${cur.title}</h1>
             <h3>${cur.description}</h3>
+            </div/>
             </div>
             `
         );
@@ -70,7 +73,7 @@ ready(() => {
     });
     wow.init();
 
-    const swiperAd = new Swiper(".mySwiperad", {
+    const swiper = new Swiper(".mySwiperad", {
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -82,7 +85,7 @@ ready(() => {
 
     renderAds();
 
-    const swiper = new Swiper(".mySwiper", {
+    const swiperrev = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
@@ -97,6 +100,9 @@ ready(() => {
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
+        },
+        autoplay: {
+            delay: 2500,
         },
     });
     document.querySelectorAll(".navbar li").forEach((e) =>
