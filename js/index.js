@@ -35,12 +35,9 @@ async function renderAds() {
             <div class="carousel-item active" data-bs-interval="5000">
                 <img src="https://admin.cryptochallengers.org/api/static/${ads[0].filename}" class="d-block w-100" alt="...">
                 <div class="box">
-                <h1>${ads[0].title}</h1>
-                <h3>${ads[0].description}</h3>
-            </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="https://admin.cryptochallengers.org/api/static/${cur.filename}" class="d-block w-100" alt="...">
+                    <h1>${ads[0].title}</h1>
+                    <h3>${ads[0].description}</h3>
+                </div>
             </div>
 
             

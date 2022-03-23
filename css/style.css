@@ -45,7 +45,6 @@
     color: white;
     display: flex;
     align-items: center;
-    margin-top: 56px;
 }
 
 .main .main-content {
@@ -171,11 +170,12 @@
         background-position: 100%;
     }
 }
-.ad h1,
-.ad h3 {
+.box h1,
+.box h3 {
     color: black !important;
-    font-family: "Mina", sans-serif;
-    margin-top: 15px;
+    font-family: "Roboto", sans-serif;
+    max-width: 80%;
+    background: red;
 }
 .ad {
     background: linear-gradient(
@@ -183,6 +183,7 @@
         #1b232a 17.57%,
         rgba(196, 196, 196, 0) 89.68%
     );
+    height: max-content;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,9 +192,20 @@
 }
 .carousel{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .carousel img{
     max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-item{
+    display: flex;
+    align-items: flex-end;
+    align-items: center;
 }
 
 
@@ -206,9 +218,9 @@ iframe {
 .box{
     width: 100%;
     text-align: center;
-    position: absolute;
-    bottom: 0;
-    background: rgba(225, 225, 225, 0.3);
+    display: flex;
+    align-self: center;
+    flex-direction: column;
 }
 
 
