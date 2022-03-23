@@ -40,12 +40,23 @@ async function renderAds() {
                 </div>
             </div>
 
-            
-            
-            
+            </div>
             `
-        );
-    }, "");
+            );
+        },
+        `<div class="carousel-item active" data-bs-interval="5000">
+                ${
+                    head.isVideo
+                        ? `<video preload="auto" controls="false" autoplay="true"><source src="https://admin.cryptochallengers.org/api/static/${head.filename}"></video>`
+                        : `<img src="https://admin.cryptochallengers.org/api/static/${head.filename}" class="d-block w-100" alt="...">`
+                } 
+                <div class="box">
+                    <h1>${head.title}</h1>
+                    <h3>${head.description}</h3>
+                </div>
+        </div>`
+    );
+
     adb.innerHTML = innerHTML;
 }
 
