@@ -35,7 +35,11 @@ async function renderAds() {
                 prev +
                 `
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="https://admin.cryptochallengers.org/api/static/${cur.filename}" class="d-block w-100" alt="...">
+                ${
+                    cur.isVideo
+                        ? `<video preload="auto" controls="false" autoplay="true"><source src="https://admin.cryptochallengers.org/api/static/${cur.filename}"></video>`
+                        : `<img loading='lazy' src="https://admin.cryptochallengers.org/api/static/${cur.filename}" class="d-block w-100" alt="...">`
+                } 
                 <div class="box">
                     <h1>${cur.title}</h1>
                     <h3>${cur.description}</h3>
@@ -46,7 +50,11 @@ async function renderAds() {
             );
         },
         `<div class="carousel-item active" data-bs-interval="5000">
-                <img src="https://admin.cryptochallengers.org/api/static/${head.filename}" class="d-block w-100" alt="...">
+                ${
+                    head.isVideo
+                        ? `<video preload="auto" controls="false" autoplay="true"><source src="https://admin.cryptochallengers.org/api/static/${head.filename}"></video>`
+                        : `<img src="https://admin.cryptochallengers.org/api/static/${head.filename}" class="d-block w-100" alt="...">`
+                } 
                 <div class="box">
                     <h1>${head.title}</h1>
                     <h3>${head.description}</h3>
