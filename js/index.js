@@ -25,30 +25,45 @@ async function getAds() {
     const data = await response.json();
     return data;
 }
+
+
 async function renderAds() {
     const adb = document.querySelector(".carousel-inner");
     const ads = await getAds();
-    const innerHTML = ads.reduce((prev, cur) => {
-        return (
-            prev +
-            `
-            <div class="carousel-item active" data-bs-interval="5000">
-                <img src="https://admin.cryptochallengers.org/api/static/${ads[0].filename}" class="d-block w-100" alt="...">
+    const [head, ...tail] = ads;
+    const innerHTML = tail.reduce(
+        (prev, cur) => {
+            return (
+                prev +
+                `
+            <div class="carousel-item" data-bs-interval="${cur.duration*1000}">
+                ${
+                    cur.isVideo
+                        ? `<video class="d-block w-100" preload="auto" loop autoplay muted ><source src="
+https://admin.cryptochallengers.org/api/static/${cur.filename}
+"></video>`
+                        : `<img loading='lazy' src="
+https://admin.cryptochallengers.org/api/static/${cur.filename}
+" class="d-block w-100" alt="...">`
+                } 
                 <div class="box">
-                    <h1>${ads[0].title}</h1>
-                    <h3>${ads[0].description}</h3>
-                </div>
-            </div>
+                        <h1>${cur.title}</h1>
+                    <h3>${cur.description}</h3>
+                    </div>
 
             </div>
             `
             );
         },
-        `<div class="carousel-item active" data-bs-interval="5000">
+        `<div class="carousel-item active" data-bs-interval="${head.duration*1000}">
                 ${
                     head.isVideo
-                        ? `<video preload="auto" controls="false" autoplay="true"><source src="https://admin.cryptochallengers.org/api/static/${head.filename}"></video>`
-                        : `<img src="https://admin.cryptochallengers.org/api/static/${head.filename}" class="d-block w-100" alt="...">`
+                        ? `<video class="d-block w-100" preload="auto" loop autoplay muted ><source src="
+https://admin.cryptochallengers.org/api/static/${head.filename}
+"></video>`
+                        : `<img src="
+https://admin.cryptochallengers.org/api/static/${head.filename}
+" class="d-block w-100" alt="...">`
                 } 
                 <div class="box">
                     <h1>${head.title}</h1>
@@ -58,7 +73,7 @@ async function renderAds() {
     );
 
     adb.innerHTML = innerHTML;
-}
+} 
 
 ready(() => {
     const typed = new Typed("#typed", {
