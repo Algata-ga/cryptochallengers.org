@@ -277,14 +277,17 @@ iframe {
 
 .partners .slide img {
     max-width: 60%;
-    max-height: 90%;
+    max-height: 55%;
     margin: -18px 0px;
     object-fit: contain;
 }
 
 .invert {
     filter: brightness(0%) saturate(10) hue-rotate(-10deg);
-    max-height: 70% !important;
+}
+.feg{
+    max-height: 90% !important;
+        max-width: 80% !important;
 }
 
 /* Animation */
@@ -751,10 +754,6 @@ footer {
     .slide img {
         height: 45px;
     } */
-    .feg {
-        z-index: -3;
-        height: 85px !important;
-    }
 }
 
 @media (min-height: 768px) {
